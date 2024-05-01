@@ -1,0 +1,77 @@
+button {
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+	border: 2px solid var(--primary);
+
+	&.label {
+		border-radius: 4px;
+		padding: 8px 18px;
+	}
+
+	// &.circle {
+	// 	border-radius: 50%;
+	// 	padding: 10px;
+	// }
+
+	&.primary {
+		background-color: var(--primary);
+		color: var(--white);
+
+		&:hover {
+			background-color: var(--hover);
+			border-color: var(--hover);
+		}
+
+		&:active {
+			background-color: var(--active);
+			border-color: var(--active);
+		}
+
+		&:focus:not(:active):not(:hover) {
+			background-color: var(--primary);
+			border-color: var(--gray);
+		}
+		&:focus-visible:not(:active):not(:hover) {
+			background-color: var(--primary);
+			border-color: var(--gray);
+			outline: none;
+		}
+
+		&:disabled {
+			background-color: var(--disabled);
+			border-color: var(--disabled);
+		}
+	}
+
+	&.secondary {
+		background-color: inherit;
+		color: var(--primary);
+
+		&:hover {
+			background-color: rgba(110, 65, 226, 0.04);
+			border-color: var(--primary);
+		}
+
+		&:active {
+			background-color: rgba(110, 65, 226, 0.16);
+			border-color: var(--primary);
+		}
+
+		&:focus:not(:active):not(:hover) {
+			background-color: inherit;
+			border-color: var(--gray);
+		}
+		&:focus-visible:not(:active):not(:hover) {
+			background-color: inherit;
+			border-color: var(--gray);
+			outline: none;
+		}
+
+		&:disabled {
+			opacity: 56%;
+		}
+	}
+}

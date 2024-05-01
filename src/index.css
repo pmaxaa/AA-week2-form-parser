@@ -11,4 +11,47 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	html {
+		box-sizing: border-box;
+	}
+
+	*,
+	*::after,
+	*::before {
+		/* margin: 0;
+    padding: 0; */
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	/* constants */
+	--disabled: #e3daf9;
+	--primary: #6e41e2;
+	--hover: #5835b0;
+	--active: #472c8a;
+
+	--white: #ffffff;
+	--white-S: rgba(255, 255, 255, 0.88);
+	--gray-M: #fafafa;
+	--gray-L: #f1f1f1;
+	--gray-S: #d4d4d4;
+	--gray: rgba(17, 17, 17, 0.48);
+	--gray-K: #6b6b6b;
+	--black: #111111;
+
+	--red-girl: #f9e3e3;
+	--red-boy: #f2caca;
+	--red: #db524e;
+	--super-red: #c7302b;
+
+	--green: #27ae60;
+
+	--blue: #428bf9;
+}
+
+button:not(:disabled) {
+	cursor: pointer;
 }
