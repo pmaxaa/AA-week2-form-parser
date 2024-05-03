@@ -52,6 +52,11 @@
 	--blue: #428bf9;
 }
 
-button:not(:disabled) {
+button:not(:disabled),
+input[type='checkbox']:not(:disabled) {
 	cursor: pointer;
+}
+
+input {
+	margin: 0;
 }
