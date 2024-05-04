@@ -1,0 +1,46 @@
+@mixin hoverShadow() {
+	box-shadow: 0px 4px 56px 0px rgba(51, 51, 51, 0.16),
+		0px 4px 4px 0px rgba(51, 51, 51, 0.04);
+}
+
+@mixin successShadow() {
+	box-shadow: 0px 4px 40px 0px rgba(39, 174, 96, 0.24),
+		0px 4px 4px 0px rgba(39, 174, 96, 0.04);
+}
+
+@mixin activeShadow() {
+	box-shadow: 0px 4px 24px 0px rgba(51, 51, 51, 0.24),
+		0px 4px 4px 0px rgba(51, 51, 51, 0.04);
+}
+
+@mixin inputText() {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	background-color: inherit;
+	border: none;
+	width: 100%;
+
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+	color: var(--black);
+
+	&:not(:focus)::placeholder {
+		color: transparent;
+	}
+
+	&:focus-visible {
+		outline: none;
+	}
+
+	&:focus,
+	&:not(:placeholder-shown) {
+		+ span {
+			transform: scale(0.81) translateY(-30px);
+		}
+	}
+}

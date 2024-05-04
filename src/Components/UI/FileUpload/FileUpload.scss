@@ -1,0 +1,82 @@
+@import '../../../styles';
+
+.file-upload-wrapper {
+	width: 675px;
+	border: none;
+	border-radius: 4px;
+
+	position: relative;
+}
+
+.drag {
+	background-color: var(--primary);
+
+	* {
+		opacity: 0%;
+	}
+	&:before {
+		content: url('/file.svg');
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.file-drag-drop {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	cursor: pointer;
+	padding: 20px;
+
+	&:hover {
+		@include activeShadow();
+	}
+
+	.title {
+		font-family: Roboto;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+	span {
+		color: var(--primary);
+	}
+
+	.require {
+		font-family: Roboto;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 20px;
+		color: var(--gray);
+	}
+}
+
+.file-list {
+	margin-top: 10px;
+
+	li {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		align-items: flex-start;
+
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+
+		button {
+			border: none;
+			background-color: transparent;
+			color: var(--primary);
+			font-family: Roboto;
+			font-size: 13px;
+			font-weight: 400;
+			line-height: 20px;
+			padding: 0;
+		}
+	}
+}
